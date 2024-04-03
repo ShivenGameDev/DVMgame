@@ -27,7 +27,8 @@ public class PlayerCombat : MonoBehaviour
         {
             if(enemy.tag=="Enemy")
             {
-                enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                if(enemy.GetComponent<Health>()){
+                enemy.GetComponent<Health>().TakeDamage(attackDamage);}
             }
         }
     }
